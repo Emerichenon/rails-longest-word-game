@@ -1,0 +1,14 @@
+<h1>Pages#game</h1>
+<p>Find me in app/views/pages/game.html.erb</p>
+
+<h2>------------ S C R A B B L E -----------</h2>
+
+<p><%= @grid.join("") %></p>
+
+<h3>Type in your longest words with these letters :</h3>
+
+<form action="/score" method="get">
+  <input type="hidden" name="grid" value="<%= @grid.join("") %>">
+  <input type="text" placeholder="Your longest word" name="user_word">
+  <input type="submit">
+</form>
