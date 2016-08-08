@@ -8,6 +8,7 @@
 <h3>Type in your longest words with these letters :</h3>
 
 <form action="/score" method="get">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
   <input type="hidden" name="grid" value="<%= @grid.join("") %>">
   <input type="text" placeholder="Your longest word" name="user_word">
   <input type="submit">

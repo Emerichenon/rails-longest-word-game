@@ -1,5 +1,14 @@
-<h1>Pages#score</h1>
-<p>Find me in app/views/pages/score.html.erb</p>
-
-<h1>Your Score</h1>
-<h2><%= @hash_final %></h2>
+<div class="wrapper">
+  <div class="container">
+    <h2>Your Score :</h1>
+    <h2><%= @hash_final[:score] %></h2>
+    <h2><%= @hash_final[:time] %></h2>
+    <p><%= @hash_final[:message] %></p>
+    <h2>Traduction : </h2>
+    <p><%= @hash_final[:translation] %></p>
+    <br>
+    <h2>Number of sessions and average score :</h2>
+    <h3><%= session[:counter] %></h3>
+    <h3><%= session[:score] / session[:counter] %></h3>
+  </div>
+</div>
